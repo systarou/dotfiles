@@ -1,0 +1,8 @@
+#.bashrc.localみたいな感じでGitHub管理外でよしなに管理する
+tagsPhpCmd='ctags --languages=php -f'
+tagsVariable=''
+tagsVariable="$tagsVariable cd <global path>; $tagsPhpCmd $HOME/.dein/tags/global.tags  <global path>;"
+tagsVariable="$tagsVariable cd $HOME/sample1; $tagsPhpCmd $HOME/.dein/tags/sample1.tags $HOME/sample1;"
+tagsVariable="$tagsVariable cd $HOME/sample2; $tagsPhpCmd $HOME/.dein/tags/sample2.tags $HOME/sample2;"
+tagsVariable="$tagsVariable cd;"
+alias TAGS=$tagsVariable
